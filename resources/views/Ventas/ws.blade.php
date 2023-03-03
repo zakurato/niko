@@ -17,7 +17,7 @@
     </div>
     <br>
     
-        <a href="https://api.whatsapp.com/send?phone=50687249099&text=DATOS DE COMPRA!!!%0aNombre:%20{{$store->nombre}}%0aCedula:%20{{$store->cedula}}%0aTeléfono:%20{{$store->telefono}}%0aLink con los datos:%20http://shrouded-wave-57573.herokuapp.com/mostrar/factura/tenis/{{$store->imagenComprobante}}/{{$store->imagen}}/{{$store->nombre}}/{{$store->cedula}}/{{$store->telefono}}/{{$store->correo}}/{{$store->direccion}}/{{$store->talla}}/{{$store->precio}}/{{$store->categoria}}">
+        <a href="https://api.whatsapp.com/send?phone=50687249099&text=DATOS DE COMPRA!!!%0aNombre:%20{{$store->nombre}}%0aCedula:%20{{$store->cedula}}%0aTeléfono:%20{{$store->telefono}}%0aLink con los datos:%20http://54.237.32.55/mostrar/factura/tenis/{{$store->imagenComprobante}}/{{$store->imagen}}/{{$store->nombre}}/{{$store->cedula}}/{{$store->telefono}}/{{$store->correo}}/{{$store->direccion}}/{{$store->talla}}/{{$store->precio}}/{{$store->categoria}}">
             <button type="button" class="btn btn-primary" style="width: 100%; height: 100px;">Enviar compra por whatApps</button>
         </a>
     </div>
