@@ -1,0 +1,99 @@
+
+body{
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/index3.jpg);
+
+}
+.wrap{
+  /* background-color: #fff; */
+  padding: 2rem 3rem; 
+  text-align: center;
+  border-style: outset;
+  border: 3px pink;
+  box-shadow: 0px 0px 30px pink;
+  color: pink;
+}
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+  }
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+  }
+
+
+
+/* Estilos para el formulario de inicio de sesión */
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.login-screen {
+  width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.app-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.control-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.login-field {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  font-size: 16px;
+}
+
+.login-field:focus {
+  outline: none;
+  border-bottom-color: #008CBA;
+}
+
+
+.btnLogin {
+  padding: 10px 20px;
+  background-color: #008CBA;  
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btnLogin:hover {
+  background-color: #007a90;
+}
+
+.btnVolver {
+  padding: 10px 20px;
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  right: 0%;
+}
+
+.btnVolver:hover {
+  background-color: #007a90;
+}

@@ -1,0 +1,44 @@
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(../images/index1.jpg);
+    backdrop-filter: blur(1px);
+    background-repeat: no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: auto;
+    background-blend-mode: darken;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .wrap{
+    /* background-color: #fff; */
+    padding: 2rem 3rem;
+    text-align: center;
+    border-style: outset;
+    border: 3px pink;
+    box-shadow: 0px 0px 30px pink;
+  }
+  .wrap:hover{
+    box-shadow: 0px 0px 100px pink;
+    
+  }
+  .a{
+    font: 100% Times New Roman;
+    color: pink;
+  }
+
+  .section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+    }
+  
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+    }
+ 

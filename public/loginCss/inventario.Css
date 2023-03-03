@@ -1,0 +1,324 @@
+body{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/index3.jpg);
+  
+}
+
+.wrap{
+    /* background-color: #fff; */
+    padding: 2rem 3rem;
+    text-align: center;
+    border-style: outset;
+    border: 3px pink;
+    box-shadow: 0px 0px 30px pink;
+    color: pink;
+  }
+
+  .section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+    }
+  
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+    }
+
+
+  /*boton crear categoria*/
+
+  .btnCrearCategoria{
+    padding: 10px 20px;
+    background-color: #008CBA;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    left: 0%;
+}
+
+.btnCrearCategoria:hover {
+  color:#fff;
+  background-color:#269abc;
+}
+
+
+  /*boton btnArticulosNuevasTallas*/
+
+  .btnArticulosNuevasTallas{
+    font: 100% Arial;
+    border: 2px solid transparent;
+    background-color:#008CBA;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    transition: 0.25s;
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0%;
+}
+
+.btnArticulosNuevasTallas:hover {
+  color:#fff;
+  background-color:#269abc;
+}
+
+
+  /*boton btnGuardarArticulo*/
+
+  .btnGuardarArticulo{
+    font: 100% Arial;
+    border: 2px solid transparent;
+    background-color:#008CBA;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    transition: 0.25s;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    left: 0%;
+}
+
+.btnGuardarArticulo:hover {
+  color:#fff;
+  background-color:#269abc;
+}
+
+
+
+
+  /*boton eliminar*/
+
+  .btnEliminar {
+    font: 40% Arial;
+    border: 2px solid transparent;
+    border-color: white;
+    background-color:red;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 2;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    transition: 0.25s;
+    width: 80px;
+    height: 30px;
+    margin: 0 auto;
+
+  }
+  
+  .btnEliminar:hover {
+    color:#fff;
+    background-color: rgb(130, 2, 2);
+  }
+
+  .btnEliminar2 {
+    font: 40% Arial;
+    border: 2px solid transparent;
+    border-color: white;
+    background-color:red;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 2;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    transition: 0.25s;
+    width: 150px;
+    height: 30px;
+    margin: 0 auto;
+
+  }
+  
+  .btnEliminar2:hover {
+    color:#fff;
+    background-color: rgb(130, 2, 2);
+  }
+
+
+
+  /*boton cerrar sesion*/
+
+  .btn2 {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    right: 0%;
+  }
+  
+  .btn2:hover {
+    background-color: #007a90;
+  }
+
+
+/*btnCA*/
+  .btn3 {
+    font: 100% Arial;
+    border: 2px solid transparent;
+    background-color:#008CBA;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    transition: 0.25s;
+    display: block;
+    width: 150px;
+    margin-right: auto;
+  }
+  
+  .btn3:hover {
+    color:#fff;
+    background-color:#269abc;
+  }
+
+  /*btnCA*/
+  .btn4 {
+    font: 100% Arial;
+    border: 2px solid transparent;
+    background-color:#008CBA;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    transition: 0.25s;
+    display: block;
+    width: 150px;
+    margin-right: auto;
+  }
+  
+  .btn4:hover {
+    color:#fff;
+    background-color:#269abc;
+  }
+
+
+  /*formulario*/
+
+  .pEtiquetas{
+    font: 100% Arial;
+  }
+
+  .pEtiquetasVistaCrearTalla{
+    text-align: center;
+    font: 100% Arial;
+  }
+
+/*selection inicio*/
+
+#mainselection {
+  overflow:hidden;
+  width:350px;
+  border-radius: 9px;
+  background: #008CBA;
+}
+
+
+#mainselection select {
+  font: 100% Arial;
+  text-align: center;
+  border: 0;
+  border-radius: 9px;
+  color: white;
+  background: transparent;
+  font-weight: bold;
+  padding: 4px 10px;
+  width: 350px;
+  background-color: #008CBA;
+}
+
+  .img{
+    width: 280px;
+    height: 200px;
+  }
+  .btnImg{
+    background-color: white;
+  }
+  .pImg{
+    color: black;
+    font: 100% Arial;
+  }
+  .linea {
+    border-top: 3px solid black;
+    width: 100%;
+    padding: 0;
+    margin: 20px auto 0 auto;
+  }
+
+  .pSession{
+    color: black;
+    font: 100% Arial;
+  }
+
+  .h1eArticulosExistentes{
+    font: 250% Arial;
+  }
+
+
+  .container {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+  }
+
+  .container2 {
+    text-align: center;
+  }
+
+/*selection to change calzado or accesorios*/
+
+.pEtiquetas{
+  font: 110% Arial;
+}
+
+/*selection inicio*/
+
+#mainselection {
+  overflow:hidden;
+  width:350px;
+  border-radius: 9px;
+  background: #008CBA;
+}
+
+
+#mainselection select {
+  font: 100% Arial;
+  text-align: center;
+  border: 0;
+  border-radius: 9px;
+  color: white;
+  background: transparent;
+  font-weight: bold;
+  padding: 4px 10px;
+  width: 350px;
+  background-color: #008CBA;
+}

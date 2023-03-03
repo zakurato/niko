@@ -1,0 +1,155 @@
+body{
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url(../images/index3.jpg);
+
+}
+.wrap{
+  /* background-color: #fff; */
+  padding: 2rem 3rem; 
+  text-align: center;
+  border-style: outset;
+  border: 3px pink;
+  box-shadow: 0px 0px 30px pink;
+  color: pink;
+}
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+  }
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+  }
+
+
+  /*barra navegacion*/
+
+  .navbar {
+    background-color: black;
+    color: white;
+    padding: 10px; 
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px; 
+  }
+  
+  li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative; 
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    background-color: black;
+    padding: 10px;
+    top: 100%; 
+    left: 0; 
+  }
+  
+  .search-form {
+    float: right;
+  }
+  
+  .search-form input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .search-form button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+    margin-left: 5px;
+  }
+  
+  .btnCategorias {
+    background-color: black;
+    color: white;
+    display: block;
+    text-align: center;
+    width: auto;
+    height: 30px;
+    border-color: rgba(255, 255, 255, 0);
+  }
+  
+
+
+
+/*paginacion*/
+
+.pagination>li{display:inline}.pagination>li>a,.pagination>li>span{position:relative;float:left;padding:6px 12px;margin-left:-1px;line-height:1.42857143;color:#337ab7;text-decoration:none;background-color:#fff;border:1px solid #ddd}.pagination>li>a:focus,.pagination>li>a:hover,.pagination>li>span:focus,.pagination>li>span:hover{z-index:2;color:#23527c;background-color:#eee;border-color:#ddd}.pagination>li:first-child>a,.pagination>li:first-child>span{margin-left:0;border-top-left-radius:4px;border-bottom-left-radius:4px}.pagination>li:last-child>a,.pagination>li:last-child>span{border-top-right-radius:4px;border-bottom-right-radius:4px}.pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover,.pagination>.active>span,.pagination>.active>span:focus,.pagination>.active>span:hover{z-index:3;color:#fff;cursor:default;background-color:#337ab7;border-color:#337ab7}.pagination>.disabled>a,.pagination>.disabled>a:focus,.pagination>.disabled>a:hover,.pagination>.disabled>span,.pagination>.disabled>span:focus,.pagination>.disabled>span:hover{color:#777;cursor:not-allowed;background-color:#fff;border-color:#ddd}.pagination-lg>li>a,.pagination-lg>li>span{padding:10px 16px;font-size:18px;line-height:1.3333333}.pagination-lg>li:first-child>a,.pagination-lg>li:first-child>span{border-top-left-radius:6px;border-bottom-left-radius:6px}.pagination-lg>li:last-child>a,.pagination-lg>li:last-child>span{border-top-right-radius:6px;border-bottom-right-radius:6px}.pagination-sm>li>a,.pagination-sm>li>span{padding:5px 10px;font-size:12px;line-height:1.5}.pagination-sm>li:first-child>a,.pagination-sm>li:first-child>span{border-top-left-radius:3px;border-bottom-left-radius:3px}.pagination-sm>li:last-child>a,.pagination-sm>li:last-child>span{border-top-right-radius:3px;border-bottom-right-radius:3px}
+
+
+/*collage*/
+
+
+
+/* Define la posición y tamaño del collage */
+#collage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Define el estilo de los botones que contienen las imágenes */
+.btnImg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 350px;
+  margin: 10px;
+  border: 2px solid #cccccc00;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.btnImg:hover {
+  box-shadow: 0 0 10px #ccc;
+}
+
+/* Define el estilo de las imágenes dentro de los botones */
+.btnImg img {
+  width: 280px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Define el estilo del texto debajo de las imágenes */
+.etiquetas2 {
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+  margin: 0;
+}
+
+.zoom {
+  transition: transform .2s; 
+}
+
+.zoom:hover {
+  transform: scale(1.5); 
+}
