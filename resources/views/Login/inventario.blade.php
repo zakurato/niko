@@ -135,9 +135,9 @@
           var selVal = selectOption.value;
         
           if(selVal == 1){
-            window.location.href = "http://shrouded-wave-57573.herokuapp.com/inventario";
+            window.location.href = "http://54.237.32.55/inventario";
           }else{
-            window.location.href = "http://shrouded-wave-57573.herokuapp.com/inventarioAccesorios";
+            window.location.href = "http://54.237.32.55/inventarioAccesorios";
           }
           
         }
