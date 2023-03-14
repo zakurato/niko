@@ -9,7 +9,7 @@
     integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 
 
-    <title>Pagina Principal2</title>
+    <title>Politicas</title>
 </head>
 <body>
     <div class="section" id="section-1">
@@ -22,44 +22,44 @@
       <nav class="navbar">
         <ul>
           <li><a href="{{route('index2')}}">Inicio</a></li>
-          <li><a href="{{route('vistaLogin')}}">Administración</a></li>
-          <li><a href="#" onclick="mostrarSubcategorias()">Categorías</a>
-            <ul class="submenu" id="subcategorias">
-              @foreach ($categoria as $item)
-                <form action="{{route('index2')}}" method="GET">
-                  @csrf
-                  <li style="text-align: center">
-                    <input type="submit" value="{{$item->categoria}}" class="btnCategorias" name="txtBuscar">
-                  </li> 
-                </form>
-              @endforeach
-            </ul>
-          </li>
         </ul>
-        <form class="search-form">
-          <input type="text" name="txtBuscar" placeholder="Buscar por nombre..." value="{{$textoABuscar}}" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
-          <button type="submit">Buscar</button>
-        </form>
       </nav>
-      
-        <br>
+      <br><br>
+      <p>
+        <p style="text-align: center">Política de privacidad de Coquetta Boutique.</p> 
+         <br><br>
 
-        <p class="pSession">{{session("cantidad")}}</p>
-        <br>
-        <div>{{ $productos->appends(request()->input())->links('pagination::bootstrap-4') }}</div>
-        <div id="collage">
-            @foreach ($productos as $item)
-              <button type="button" class="btnImg zoom" onclick="location.href = '{{route('mostrarProducto',$item->id)}}'">
-                <img src="{{asset("imagesInventario/$item->imagen")}}">
-                <p class="etiquetas2">{{$item->nombre}}</p>
-              </button>
-            @endforeach
-          </div>
-        <div>{{ $productos->appends(request()->input())->links('pagination::bootstrap-4') }}</div>
+En Coquetta Boutique, nos tomamos muy en serio la privacidad de nuestros clientes y usuarios. Por lo tanto, hemos creado esta política de privacidad para explicar cómo recopilamos, usamos, divulgamos y protegemos la información personal de nuestros clientes.
+<br><br>
+Recopilación de información personal
+<br>
+Recopilamos información personal cuando los clientes realizan una compra en nuestra tienda en línea. Esta información puede incluir la cédula, el nombre completo, el teléfono, el correo electronico y la direccion exacta del domicilio.
+<br><br>
+Uso de la información personal
+<br>
+La información personal recopilada se utiliza para procesar la compra del cliente y proporcionar los productos o servicios solicitados. También podemos utilizar la información personal para comunicarnos con el cliente sobre el estado del pedido, enviar información de marketing y promociones, o para cumplir con nuestras obligaciones legales.
+<br><br>
+Divulgación de información personal
+<br>
+No compartimos la información personal de nuestros clientes con terceros, excepto cuando sea necesario para procesar la compra o cumplir con obligaciones legales. Por ejemplo, podemos compartir la información personal con nuestros proveedores de servicios de pago para procesar el pago del cliente.
+<br><br>
+Protección de la información personal
+<br>
+Tomamos medidas de seguridad razonables para proteger la información personal de nuestros clientes contra el acceso no autorizado, la divulgación y el uso indebido. Utilizamos tecnologías de encriptación y protección de datos para garantizar que la información personal se transmita de manera segura y almacenada de manera segura.
+<br><br>
+Cambios a esta política de privacidad
+<br>
+Nos reservamos el derecho de actualizar o modificar esta política de privacidad en cualquier momento. Cualquier cambio significativo en esta política de privacidad se publicará en nuestro sitio web y se comunicará a los clientes por correo electrónico o por otros medios.
+<br><br>
+Contacto
+<br>
+Si tiene alguna pregunta o inquietud sobre esta política de privacidad o sobre cómo manejamos la información personal, puede ponerse en contacto con nosotros en cualquier momento a través de los medios de contacto proporcionados en nuestro sitio web.
+<br><br>
+Última actualización: 14/03/2023
+      </p>
 
-        </div>
 
-      <br>
+
       <br><br><br><br><br><br>
       <div class="section" id="section-3">
         <footer style="background-color: black; color: white; padding: 80px;">

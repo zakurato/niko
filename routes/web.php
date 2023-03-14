@@ -76,6 +76,9 @@ Route::delete("/eliminarCategoria",[HomeController::class,"eliminarCategoria"])-
 
 Route::delete("/eliminarCategoriaAccesorios",[HomeController::class,"eliminarCategoriaAccesorios"])->name("eliminarCategoriaAccesorios")->middleware("auth");
 
+Route::get("/politicas",[HomeController::class,"politicas"])->name("politicas");
+
+
 
 
 

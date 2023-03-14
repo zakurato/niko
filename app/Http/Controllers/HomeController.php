@@ -685,5 +685,9 @@ class HomeController extends Controller
         return redirect()->route("vistaCrearCategoriaAccesorios");
     }
 
+    public function politicas(){
+        return view("PaginaPrincipal.politicas");
+    }
+
 
 }
