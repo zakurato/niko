@@ -28,7 +28,7 @@ Route::post('storeComprobante',[HomeController::class,"storeComprobante"])->name
 Route::post('storeComprobanteAccesorios',[HomeController::class,"storeComprobanteAccesorios"])->name('storeComprobanteAccesorios');
 
 
-Route::get('mostrar/factura/tenis/{id}',[HomeController::class,"vistaComprobante"])->name("factura");
+Route::get('mostrar/factura/tenis/{comprobante}/{tenis}/{nombre}/{cedula}/{telefono}/{correo}/{direccion}/{talla}/{precio}/{categoria}',[HomeController::class,"vistaComprobante"])->name("factura");
 
 Route::get('mostrar/factura/accesorios/{comprobante}/{tenis}/{nombre}/{cedula}/{telefono}/{correo}/{direccion}/{precio}/{categoria}',[HomeController::class,"vistaComprobanteAccesorios"])->name("facturaAccesorios");
 
