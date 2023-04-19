@@ -21,28 +21,29 @@ class HomeController extends Controller
     }
 
     public function index2(Request $request){
-
-        $productoNombre = Producto::all();
-        $textoABuscar = trim($request->get('txtBuscar'));
-
-        //return $textoABuscar;
+        //return $request;
 
         $categoria = Categoria::all();
-        $textoABuscar = trim($request->get('txtBuscar'));
 
-        if($textoABuscar == ""){
-            
-            $productos = DB::table('productos')->orderBy('created_at', 'desc')->paginate(5);
-            return view('PaginaPrincipal.index2',compact('productos','textoABuscar',"categoria"));
-            
-        }else{
+        $textoABuscar = trim($request->get('txtBuscar')); //Buscar por nombre
+        $textoABuscarCategoria = $request->txtBuscarCategoria;//buscar por categoria
 
-            $productos = Producto::where('categoria', $textoABuscar)
-            ->orWhere('nombre', $textoABuscar)
+
+        if($textoABuscarCategoria != ""){
+            $productos = Producto::where('categoria', $textoABuscarCategoria)
             ->orderBy('created_at', 'desc')
             ->paginate(5);
             return view('PaginaPrincipal.index2',compact('productos','textoABuscar',"categoria"));
+        }if($textoABuscar != ""){
+            $productos = Producto::where('nombre', 'LIKE', '%'.$textoABuscar.'%')
+            ->orderBy('created_at', 'desc')
+            ->paginate(5);
+            return view('PaginaPrincipal.index2',compact('productos','textoABuscar',"categoria"));
+        }else{
+            $productos = DB::table('productos')->orderBy('created_at', 'desc')->paginate(5);
+            return view('PaginaPrincipal.index2',compact('productos','textoABuscar',"categoria"));
         }
+
 
     }
     public function mostrar($id){

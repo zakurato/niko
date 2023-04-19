@@ -29,7 +29,7 @@
                 <form action="{{route('index2')}}" method="GET">
                   @csrf
                   <li style="text-align: center">
-                    <input type="submit" value="{{$item->categoria}}" class="btnCategorias" name="txtBuscar">
+                    <input type="submit" value="{{$item->categoria}}" class="btnCategorias" name="txtBuscarCategoria">
                   </li> 
                 </form>
               @endforeach
