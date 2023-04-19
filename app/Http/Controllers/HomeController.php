@@ -248,9 +248,9 @@ class HomeController extends Controller
 
 
 
-    public function vistaComprobante($comprobante,$tenis,$nombre,$cedula,$telefono,$correo,$direccion,$talla,$precio,$categoria){
-        $compras = Compra::all();
-        return view("Ventas.factura",compact("compras","comprobante","tenis","nombre","cedula","telefono","correo","direccion","talla","precio","categoria"));
+    public function vistaComprobante($id){
+        $compras = Compra::where('id', $id)->first();
+        return view("Ventas.factura",compact("compras"));
     }
 
     public function vistaComprobanteAccesorios($comprobante,$tenis,$nombre,$cedula,$telefono,$correo,$direccion,$precio,$categoria){
