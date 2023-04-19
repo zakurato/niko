@@ -18,49 +18,46 @@
     <br>
         <div class="form-group">
             <label for="cedula" class="pEtiquetas" required>Cédula:</label>
-            <input type="cedula" class="form-control pEtiquetas" value="{{$cedula}}" readonly>
+            <input type="cedula" class="form-control pEtiquetas" value="{{$compras->cedula}}" readonly>
           </div>
         <div class="form-group">
           <label for="nombre" class="pEtiquetas" required>Nombre completo:</label>
-          <input type="nombre" class="form-control pEtiquetas" value="{{$nombre}}" readonly>
+          <input type="nombre" class="form-control pEtiquetas" value="{{$compras->nombre}}" readonly>
 
         </div>
         <div class="form-group">
             <label for="telefono" class="pEtiquetas" required>Teléfono:</label>
-            <input type="phone" class="form-control pEtiquetas" value="{{$telefono}}" readonly>
+            <input type="phone" class="form-control pEtiquetas" value="{{$compras->telefono}}" readonly>
         </div>
         <div class="form-group">
             <label for="correo" class="pEtiquetas" required>Correo:</label>
-            <input type="email" class="form-control pEtiquetas" value="{{$correo}}" readonly>
+            <input type="email" class="form-control pEtiquetas" value="{{$compras->correo}}" readonly>
         </div>
         <div class="form-group">
             <label for="direccion" class="pEtiquetas" required>Dirección exacta:</label>
-            <textarea class="form-control pEtiquetas" rows="3" readonly>{{$direccion}}</textarea>
+            <textarea class="form-control pEtiquetas" rows="3" readonly>{{$compras->direccion}}</textarea>
         </div>
         <div class="form-group">
             <label for="direccion" class="pEtiquetas" required>Precio:</label>
-            <textarea class="form-control pEtiquetas" rows="3" readonly>{{$precio}}</textarea>
+            <textarea class="form-control pEtiquetas" rows="3" readonly>{{$compras->precio}}</textarea>
         </div>
         <div class="form-group">
             <label for="direccion" class="pEtiquetas" required>Categoria:</label>
-            <textarea class="form-control pEtiquetas" rows="3" readonly>{{$categoria}}</textarea>
+            <textarea class="form-control pEtiquetas" rows="3" readonly>{{$compras->categoria}}</textarea>
         </div>
         
-    @foreach ($compras as $item)
 
-        @if ($item->imagenComprobante == $comprobante && $item->imagen == $tenis)
         <div id="collage">
             <button type="button" class="btnImg zoom">
-            <img class="zoom" style="width: 400px; height: 70%;" src="{{asset("imagesInventario/$item->imagen")}}">
+            <img class="zoom" style="width: 400px; height: 70%;" src="{{asset("imagesInventario/$compras->imagen")}}">
           </button>
         </div>
         <div id="collage">
           <button type="button" class="btnImg zoom">
-            <img class="zoom" style="width: 400px; height: 70%;" src="{{asset("imagesComprobantes/$item->imagenComprobante")}}">
+            <img class="zoom" style="width: 400px; height: 70%;" src="{{asset("imagesComprobantes/$compras->imagenComprobante")}}">
           </button>
         </div>
-        @endif
-    @endforeach
+
 </div>
 
 </body>

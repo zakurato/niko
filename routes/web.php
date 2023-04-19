@@ -30,7 +30,7 @@ Route::post('storeComprobanteAccesorios',[HomeController::class,"storeComprobant
 
 Route::get('mostrar/factura/tenis/{id}',[HomeController::class,"vistaComprobante"])->name("factura");
 
-Route::get('mostrar/factura/accesorios/{comprobante}/{tenis}/{nombre}/{cedula}/{telefono}/{correo}/{direccion}/{precio}/{categoria}',[HomeController::class,"vistaComprobanteAccesorios"])->name("facturaAccesorios");
+Route::get('mostrar/factura/accesorios/{id}',[HomeController::class,"vistaComprobanteAccesorios"])->name("facturaAccesorios");
 
 Route::get("vista/login/niko",[HomeController::class,"vistaLogin"])->name("vistaLogin");
 

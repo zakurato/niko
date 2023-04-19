@@ -253,9 +253,9 @@ class HomeController extends Controller
         return view("Ventas.factura",compact("compras"));
     }
 
-    public function vistaComprobanteAccesorios($comprobante,$tenis,$nombre,$cedula,$telefono,$correo,$direccion,$precio,$categoria){
-        $compras = Compra::all();
-        return view("Ventas.facturaAccesorios",compact("compras","comprobante","tenis","nombre","cedula","telefono","correo","direccion","precio","categoria"));
+    public function vistaComprobanteAccesorios($id){
+        $compras = Compra::where('id', $id)->first();
+        return view("Ventas.facturaAccesorios",compact("compras"));
     }
 
     public function vistaLogin(){
