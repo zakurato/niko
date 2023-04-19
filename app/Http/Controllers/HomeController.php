@@ -643,6 +643,7 @@ class HomeController extends Controller
         if($tallas->isEmpty() == 1){
             $deleted = Talla::where([['imagen', '=', $request->imagen] ])->delete();
             $deleted2 = Producto::where([['imagen', '=', $request->imagen] ])->delete();
+            unlink(public_path('imagesInventario/'.$request->imagen));
 
             session()->flash("eliminarImagenCalzado","Se ha eliminado correctamente el producto");
             return redirect()->route("articulosNuevasTallas");
