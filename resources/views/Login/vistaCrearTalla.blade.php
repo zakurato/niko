@@ -50,7 +50,10 @@
     </div>
 
     <div class="container2">
-        <input type="text" class="pEtiquetasVistaCrearTalla" value="{{$producto->nombre}}" readonly><br>
+      <div style="text-align: center; width: 30%; margin: 0 auto;">
+        <label for="">{{$producto->nombre}}</label>
+      </div>
+      <br>
         @foreach ($tallas as $item)
             @if ($item->imagen == $producto->imagen)
                 <label class="pEtiquetasVistaCrearTalla">Tallas ya existentes: {{$item->talla}} Cantidad en inventario: {{$item->cantidad}} Precio: ₡{{$item->precio}}</label>

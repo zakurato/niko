@@ -41,7 +41,8 @@
           <div id="collage">
               <button type="button" class="btnImg">
                 <img class="zoom" src="{{asset("imagesInventario/$productos->imagen")}}" style="max-width: 400px; height: 70%;">
-                <input style="text-align: center" type="text" class=" pEtiquetas" name="nombreTenis" value="{{$productos->nombre}}" readonly>
+                <label for="">{{$productos->nombre}}</label>
+                <br>
                 <div class="container2">
                   <div class="custom-select" style="width:300px;">
                     <select name="talla" required class="centrarEtiquetas">
