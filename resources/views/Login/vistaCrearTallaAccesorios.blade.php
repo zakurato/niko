@@ -35,7 +35,11 @@
     </div>
 
     <div class="container2">
-        <input type="text" class="pEtiquetasVistaCrearTalla" value="{{$producto->nombre}}" readonly><br>
+      <div class="container2">
+        <div style="text-align: center; width: 80%; margin: 0 auto;">
+          <label for="">{{$producto->nombre}}</label>
+        </div>
+        <br>
                 <label class="pEtiquetasVistaCrearTalla">Cantidad en inventario: {{$tallas->cantidad}} Precio: ₡{{$tallas->precio}}</label>
                 <form style="display: inline;" action="{{route("eliminarArticuloAccesorios")}}" method="POST">
                     @method("delete")

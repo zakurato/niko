@@ -40,7 +40,7 @@
           <div id="collage">
             <button type="button" class="btnImg zoom">
               <img src="{{asset("imagesInventario/$productos->imagen")}}" style="max-width: 400px; height: 70%;">
-              <input style="text-align: center" type="text" class=" pEtiquetas" name="nombreTenis" value="{{$productos->nombre}}" readonly>
+              <label for="">{{$productos->nombre}}</label>
               <input style="text-align: center" type="text" class=" pEtiquetas" name="precio" value="Precio: ₡{{$tallas->precio}}" readonly>
               <input type="hidden" value="{{$productos->categoria}}" name="categoria">
             </button>

@@ -50,7 +50,7 @@
     </div>
 
     <div class="container2">
-      <div style="text-align: center; width: 30%; margin: 0 auto;">
+      <div style="text-align: center; width: 80%; margin: 0 auto;">
         <label for="">{{$producto->nombre}}</label>
       </div>
       <br>
