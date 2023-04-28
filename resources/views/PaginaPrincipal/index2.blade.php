@@ -44,15 +44,17 @@
       
         <br>
 
-        <p class="pSession">{{session("cantidad")}}</p>
         <br>
         <div>{{ $productos->appends(request()->input())->links('pagination::bootstrap-4') }}</div>
         <div id="collage">
             @foreach ($productos as $item)
-              <button type="button" class="btnImg zoom" onclick="location.href = '{{route('mostrarProducto',$item->id)}}'">
-                <img src="{{asset("imagesInventario/$item->imagen")}}">
-                <p class="etiquetas2">{{$item->nombre}}</p>
-              </button>
+            <button type="button" class="btnImg zoom" onclick="location.href = '{{route('mostrarProducto',$item->id)}}'">
+              <img src="{{asset("imagesInventario/$item->imagen")}}">
+              <p class="etiquetas2">{{$item->nombre}}</p>
+              @if (session("cantidad") == $item->imagen)
+                <p class="pSession">No hay existencia de este artículo</p>
+              @endif
+            </button>
             @endforeach
           </div>
         <div>{{ $productos->appends(request()->input())->links('pagination::bootstrap-4') }}</div>

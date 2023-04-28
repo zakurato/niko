@@ -49,7 +49,7 @@ class HomeController extends Controller
     public function mostrar($id){
         $productos = Producto::where('id', $id)->first(); // busco el id del producto para traer el producto
         $cantidad = Talla::where("imagen", $productos->imagen)->get();
-
+        
         $siHayTallas = 0;
 
         foreach($cantidad as $item){
@@ -60,7 +60,7 @@ class HomeController extends Controller
 
         if($siHayTallas == 0){
             //return "no hay cantidad en inventario de ese articulo";
-            session()->flash("cantidad","No hay existencia de este articulo");
+            session()->flash("cantidad",$productos->imagen);
             return redirect()->route("index2");
 
         }else{
