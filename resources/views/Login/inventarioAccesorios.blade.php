@@ -120,6 +120,10 @@
         <a href="{{route("reporteVentas")}}">
           <button class="btnArticulosNuevasTallas">Reporte de ventas</button>
         </a>
+        <br><br><br>
+        <a href="{{route("reporteInventario")}}">
+          <button class="btnArticulosNuevasTallas">Reporte de inventario</button>
+        </a>
       </div>
 
 </body>
