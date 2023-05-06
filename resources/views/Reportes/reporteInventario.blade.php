@@ -53,8 +53,8 @@
                     @if ($item2->imagen == $item->imagen)
                         @if ($item2->cantidad == 0)
                           <div>
-                            <p style="color: red !important" class="etiquetas2" style="display: inline;">Talla: {{ $item2->talla }}</p>
-                            <p style="color: red !important" class="etiquetas2" style="display: inline;">Existencia de pares: {{ $item2->cantidad }}</p>
+                            <p class="etiquetas2" style="display: inline; color: red">Talla: {{ $item2->talla }}</p>
+                            <p class="etiquetas2" style="display: inline; color: red">Existencia de pares: {{ $item2->cantidad }}</p>
                           </div>  
                         @else
                           <div>
