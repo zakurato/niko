@@ -290,6 +290,29 @@ class HomeController extends Controller
         return view("Reportes.reporteVentas",compact("compras","total"));
     }
 
+    public function reporteInventario(Request $request){
+
+        //return $request->txtBuscarCategoria;
+
+        if($request->txtBuscarCategoria == ""){
+            $tallas = Talla::all();
+            $productos = Producto::all();
+            $categoria = Categoria::all();
+            return view("Reportes.reporteInventario",compact("categoria","productos","tallas"));
+        }
+        if($request->txtBuscarCategoria == "TODAS"){
+            $tallas = Talla::all();
+            $productos = Producto::all();
+            $categoria = Categoria::all();
+            return view("Reportes.reporteInventario",compact("categoria","productos","tallas"));
+        }else{
+            $tallas = Talla::all();
+            $productos = Producto::where("categoria", $request->txtBuscarCategoria)->get();
+            $categoria = Categoria::all();
+            return view("Reportes.reporteInventario",compact("categoria","productos","tallas"));
+        }
+    }
+
     public function actionReportesVentas(Request $request){
 
         $compras = Compra::whereBetween(DB::raw('DATE(created_at)'), [$request->fechaInicio, $request->fechaFin])->get();

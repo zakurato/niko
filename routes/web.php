@@ -42,6 +42,9 @@ Route::get("/reporteVentas",[HomeController::class,"reporteVentas"])->name("repo
 
 Route::get("/actionReportesVentas",[HomeController::class,"actionReportesVentas"])->name("actionReportesVentas")->middleware("auth");
 
+Route::get("/reporteInventario",[HomeController::class,"reporteInventario"])->name("reporteInventario")->middleware("auth");
+
+
 Route::get("/inventarioAccesorios",[HomeController::class,"inventarioAccesorios"])->name("inventarioAccesorios")->middleware("auth");
 
 Route::post("deslogeo",[HomeController::class,"logout"])->name("logout");
