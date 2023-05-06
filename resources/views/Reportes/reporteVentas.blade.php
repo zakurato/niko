@@ -41,7 +41,7 @@
             <tr style="background-color: #f8f8f8;">
               <th style="padding: 10px; border: 1px solid #ddd;">Datos</th>
               <th style="padding: 10px; border: 1px solid #ddd;">Imagenes</th>
-              <th style="padding: 10px; border: 1px solid #ddd;">Total = {{$total}}</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Total = ₡{{$total}}</th>
             </tr>
             @foreach ($compras as $item)
             <tr>
