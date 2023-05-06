@@ -38,6 +38,10 @@ Route::post("/loginAuth",[HomeController::class,"loginAuth"])->name("loginAuth")
 
 Route::get("/inventario",[HomeController::class,"inventario"])->name("inventario")->middleware("auth");
 
+Route::get("/reporteVentas",[HomeController::class,"reporteVentas"])->name("reporteVentas")->middleware("auth");
+
+Route::get("/actionReportesVentas",[HomeController::class,"actionReportesVentas"])->name("actionReportesVentas")->middleware("auth");
+
 Route::get("/inventarioAccesorios",[HomeController::class,"inventarioAccesorios"])->name("inventarioAccesorios")->middleware("auth");
 
 Route::post("deslogeo",[HomeController::class,"logout"])->name("logout");

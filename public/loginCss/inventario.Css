@@ -322,3 +322,20 @@ body{
   width: 350px;
   background-color: #008CBA;
 }
+
+
+
+/*reportes*/
+
+.btnBuscar{
+    padding: 10px 20px;
+    background-color: #008CBA;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    left: 0%;
+}

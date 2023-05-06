@@ -284,6 +284,23 @@ class HomeController extends Controller
         return view("Login.inventario",compact("categoria","productos"));
     }
 
+    public function reporteVentas(){
+        $compras= [];
+        $total = "";
+        return view("Reportes.reporteVentas",compact("compras","total"));
+    }
+
+    public function actionReportesVentas(Request $request){
+
+        $compras = Compra::whereBetween(DB::raw('DATE(created_at)'), [$request->fechaInicio, $request->fechaFin])->get();
+        $total = 0;
+        foreach($compras as $item){
+           $total = $total + $item->precio; 
+        }
+        //revisar las fechas que queden en la que se selecciona y tambien en el primer que no se filtre nada
+        return view("Reportes.reporteVentas",compact("compras","total"));
+    }
+
 
     public function inventarioAccesorios(){
         $categoria = Categoria::all();
