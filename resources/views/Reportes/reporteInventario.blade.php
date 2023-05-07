@@ -106,6 +106,28 @@
           
 </body>
 
+<script>
+    /*script para las secciones en movimiento*/
+    const sections = document.querySelectorAll('.section');
+    const options = {
+      threshold: 0.2
+    };
+    
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, options);
+    
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
 
 <script>
 function mostrarSubcategorias() {
