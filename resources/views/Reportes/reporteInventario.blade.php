@@ -74,21 +74,11 @@
       foreach ($cantidadesPorCategoria as $categoria => $cantidad) {
           // Imprimir el nombre de la categoría y la cantidad de pares existentes
           echo '<div style="text-align: left !important;">';
-          echo '<p>'. $categoria .' Existencia de pares: ' . $cantidad . '</p>';
+          echo  $categoria .' Existencia de pares: ' . $cantidad ;
           echo '</div>';
       }
        ?>
       
-  
-    
-
-
-
-
-
-
-
-
         <br>
         <div id="collage" style="display: flex; flex-wrap: wrap;">
             @foreach ($productos as $item)
@@ -115,28 +105,6 @@
           </div>          
           
 </body>
-
-<script>
-    /*script para las secciones en movimiento*/
-    const sections = document.querySelectorAll('.section');
-    const options = {
-      threshold: 0.2
-    };
-    
-    const observer = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        } else {
-          entry.target.classList.remove('visible');
-        }
-      });
-    }, options);
-    
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  </script>
 
 
 <script>
