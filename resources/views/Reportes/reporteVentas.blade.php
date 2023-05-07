@@ -38,6 +38,15 @@
         <br><br><br><br>
 
         <table style="border-collapse: collapse; width: 100%;">
+          <tr style="background-color: #f8f8f8;">
+            <th style="padding: 10px; border: 1px solid #ddd;">
+              De la fecha: {{ isset($_GET['fechaInicio']) ? $_GET['fechaInicio'] : date('Y-m-d') }} 
+              hasta la fecha: {{ isset($_GET['fechaFin']) ? $_GET['fechaFin'] : date('Y-m-d') }}
+              se vendio {{$productosVendidos}} producto(s)
+            </th>
+            <th style="padding: 10px; border: 1px solid #ddd;"></th>
+            <th style="padding: 10px; border: 1px solid #ddd;"></th>
+          </tr>
             <tr style="background-color: #f8f8f8;">
               <th style="padding: 10px; border: 1px solid #ddd;">Datos</th>
               <th style="padding: 10px; border: 1px solid #ddd;">Imagenes</th>

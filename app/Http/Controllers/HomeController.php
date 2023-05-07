@@ -287,7 +287,8 @@ class HomeController extends Controller
     public function reporteVentas(){
         $compras= [];
         $total = "";
-        return view("Reportes.reporteVentas",compact("compras","total"));
+        $productosVendidos = "";
+        return view("Reportes.reporteVentas",compact("compras","total","productosVendidos"));
     }
 
     public function reporteInventario(Request $request){
@@ -309,6 +310,8 @@ class HomeController extends Controller
             $tallas = Talla::all();
             $productos = Producto::where("categoria", $request->txtBuscarCategoria)->get();
             $categoria = Categoria::all();
+
+            
             return view("Reportes.reporteInventario",compact("categoria","productos","tallas"));
         }
     }
@@ -316,12 +319,13 @@ class HomeController extends Controller
     public function actionReportesVentas(Request $request){
 
         $compras = Compra::whereBetween(DB::raw('DATE(created_at)'), [$request->fechaInicio, $request->fechaFin])->get();
+        $productosVendidos = $compras->count();
         $total = 0;
         foreach($compras as $item){
            $total = $total + $item->precio; 
         }
         //revisar las fechas que queden en la que se selecciona y tambien en el primer que no se filtre nada
-        return view("Reportes.reporteVentas",compact("compras","total"));
+        return view("Reportes.reporteVentas",compact("compras","total","productosVendidos"));
     }
 
 

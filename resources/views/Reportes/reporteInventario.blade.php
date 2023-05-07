@@ -43,6 +43,52 @@
         </ul>
       </nav>
 
+
+
+      
+      <?php
+      // Inicializar el array asociativo de categorías
+      $cantidadesPorCategoria = [];
+      
+      // Recorrer todos los productos
+      foreach ($productos as $producto) {
+          // Obtener la categoría del producto
+          $categoria = $producto->categoria;
+      
+          // Si la categoría aún no está en el array asociativo, inicializarla en cero
+          if (!isset($cantidadesPorCategoria[$categoria])) {
+              $cantidadesPorCategoria[$categoria] = 0;
+          }
+      
+          // Recorrer todas las tallas
+          foreach ($tallas as $talla) {
+              // Si la imagen de la talla coincide con la imagen del producto y la cantidad es un número válido
+              if ($talla->imagen == $producto->imagen && is_numeric($talla->cantidad)) {
+                  // Agregar la cantidad de pares al total de la categoría del producto
+                  $cantidadesPorCategoria[$categoria] += intval($talla->cantidad);
+              }
+          }
+      }
+      
+      // Recorrer el array asociativo de categorías y cantidades
+      foreach ($cantidadesPorCategoria as $categoria => $cantidad) {
+          // Imprimir el nombre de la categoría y la cantidad de pares existentes
+          echo '<div style="text-align: left !important;">';
+          echo '<p>'. $categoria .' Existencia de pares: ' . $cantidad . '</p>';
+          echo '</div>';
+      }
+       ?>
+      
+  
+    
+
+
+
+
+
+
+
+
         <br>
         <div id="collage" style="display: flex; flex-wrap: wrap;">
             @foreach ($productos as $item)
