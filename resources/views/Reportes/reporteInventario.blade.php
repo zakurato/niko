@@ -18,7 +18,6 @@
         </div>
     </div>
     <br>
-    <div class="section" id="section-2">
       <nav class="navbar">
         <ul>
         <li><a href="{{route("inventario")}}" >Volver</a>
